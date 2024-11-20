@@ -1,0 +1,757 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+/* MENU */
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #1CB698;
+    text-decoration: none;
+}
+.contenedor-header header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Centra los elementos de la lista */
+}
+
+.contenedor-header header nav ul li {
+    margin: 0 15px;
+}
+
+.contenedor-header header nav ul li a {
+    text-align: center; /* Centra el texto dentro del enlace */
+    color: #fff;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: #1CB698;
+}
+.nav-responsive{
+    background-color: #1CB698;
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/* SECCION I N I C I O */
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/fondo.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.inicio .contenido-banner .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contenido-banner .redes a:hover{
+    background-color: #1CB698;
+}
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+    color: #1CB698;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col
+{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #1CB698;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #1CB698;
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+/* SECCION primerCiclo */
+.primerCiclo{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.primerCiclo .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.primerCiclo h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.primerCiclo .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.primerCiclo .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+.primerCiclo .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.primerCiclo .fila .izquierda{
+    border-right: 7px solid #252A2E;
+}
+.primerCiclo .fila .derecha{
+    border-left: 2px solid #252A2E;
+}
+.primerCiclo .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252A2E;
+    position: relative;
+}
+.primerCiclo .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.primerCiclo .fila .item .casa{
+    color: #1CB698;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.primerCiclo .fila .item .fecha{
+    display: block;
+    color: #1CB698;
+    margin-bottom: 10px;
+}
+.primerCiclo .fila .item p{
+    line-height: 24px;
+}
+.primerCiclo .fila .izq{
+    border-right: 2px solid #1CB698;
+    margin-right: 20px;
+}
+.primerCiclo .fila .der{
+    border-left: 2px solid #1CB698;
+    margin-left: 20px;
+}
+.primerCiclo .fila .item .conectori{
+    height: 2px;
+    background-color: #1CB698;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.primerCiclo .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1CB698;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.primerCiclo .fila .item .conectord{
+    height: 2px;
+    background-color: #1CB698;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.primerCiclo .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1CB698;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+/* SECCION primerCiclo */
+.segundoCiclo{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.segundoCiclo .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.segundoCiclo h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.segundoCiclo .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.segundoCiclo .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+.segundoCiclo .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.segundoCiclo .fila .izquierda{
+    border-right: 7px solid #252A2E;
+}
+.segundoCiclo .fila .derecha{
+    border-left: 2px solid #252A2E;
+}
+.segundoCiclo .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252A2E;
+    position: relative;
+}
+.segundoCiclo .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.segundoCiclo .fila .item .casa{
+    color: #1CB698;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.segundoCiclo .fila .item .fecha{
+    display: block;
+    color: #1CB698;
+    margin-bottom: 10px;
+}
+.segundoCiclo .fila .item p{
+    line-height: 24px;
+}
+.segundoCiclo .fila .izq{
+    border-right: 2px solid #1CB698;
+    margin-right: 20px;
+}
+.segundoCiclo .fila .der{
+    border-left: 2px solid #1CB698;
+    margin-left: 20px;
+}
+.segundoCiclo .fila .item .conectori{
+    height: 2px;
+    background-color: #1CB698;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.segundoCiclo .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1CB698;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.segundoCiclo .fila .item .conectord{
+    height: 2px;
+    background-color: #1CB698;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.segundoCiclo .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #1CB698;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+.texto-centro {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 20px 0; /* Añade un margen superior e inferior, ajusta según sea necesario */
+}
+/* SECCION portfolioprimerciclo */
+.portfolioprimerciclo{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.portfolioprimerciclo .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolioprimerciclo h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolioprimerciclo .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolioprimerciclo .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portfolioprimerciclo .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+.portfolioprimerciclo .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portfolioprimerciclo .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.portfolioprimerciclo .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.portfolioprimerciclo .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0px;
+}
+.galeria {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a varias líneas */
+    justify-content: space-between; /* Espacio entre los elementos */
+    margin: 0 auto; /* Centra la galería en su contenedor */
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+.proyecto {
+    width: calc(33.33% - 10px); /* Tres elementos por fila, ajusta el espacio entre ellos */
+    margin-bottom: 20px; /* Espacio entre filas */
+    position: relative; /* Para la superposición */
+}
+
+.proyecto img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    border-radius: 8px; /* Opcional: agrega bordes redondeados a las imágenes */
+}
+
+.overlay {
+    position: absolute; /* Superpone el texto sobre la imagen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: #fff; /* Color del texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s; /* Transición suave para la superposición */
+}
+
+.proyecto:hover .overlay {
+    opacity: 1; /* Muestra la superposición al pasar el mouse */
+}
+/* SECCION portfoliosegundociclo */
+.portfoliosegundociclo{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.portfoliosegundociclo .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.portfoliosegundociclo h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.portfoliosegundociclo .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfoliosegundociclo .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portfoliosegundociclo .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+.portfoliosegundociclo .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portfoliosegundociclo .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.portfoliosegundociclo .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.portfoliosegundociclo .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0px;
+}
+.video-pequeño {
+    width: 150px; /* Ajusta el tamaño inicial del video */
+    height: auto; /* Mantiene la proporción del video */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+    transition: width 0.5s ease; /* Animación suave para el cambio de tamaño */
+}
+
+.video-grande {
+    width: 100%; /* Ajusta el tamaño al 100% del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+.proyecto {
+    position: relative;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho de la columna */
+    height: 200px; /* Establece una altura fija para todos los proyectos */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+.proyecto img, .proyecto video {
+    width: 100%; /* Asegúrate de que ocupen todo el ancho del contenedor */
+    height: 100%; /* Asegúrate de que ocupen toda la altura del contenedor */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    display: block; /* Asegúrate de que se comporta como un bloque */
+}
+
+
+
+.proyecto:hover .overlay {
+    opacity: 1; /* Hace visible la superposición al pasar el mouse */
+}
+
+/* Estilo adicional para alinear los videos y la metamorfosis en la parte superior */
+.video {
+    grid-column: span 2; /* Hacer que los videos ocupen dos columnas */
+}
+/* SECCION REFLEXCION */
+.REFLEXCION {
+    background-color: #1e2326; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 50px 20px; /* Espaciado */
+}
+
+.REFLEXCION .contenido-seccion {
+    max-width: 1100px; /* Ancho máximo */
+    margin: auto; /* Centra el contenido */
+}
+
+.REFLEXCION h2 {
+    font-size: 48px; /* Tamaño del título */
+    font-family: 'Righteous'; /* Fuente del título */
+    text-align: center; /* Centra el título */
+    padding: 20px 0; /* Espaciado alrededor del título */
+}
+
+.REFLEXCION p {
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Espaciado alrededor del párrafo */
+}
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}
